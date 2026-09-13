@@ -1,4 +1,3 @@
-import json
 import os
 import subprocess
 import sys
@@ -38,6 +37,7 @@ LOGGING_STEPS = 10
 SAVE_TOTAL_LIMIT = 2
 NUM_WORKERS = 4
 
+# Set to True only when using DeepSpeed configuration.
 USE_DEEPSPEED = False
 DEEPSPEED_CONFIG = "./scripts/zero2.json"
 
@@ -126,3 +126,5 @@ subprocess.run(command, check=True)
 
 print("\nLLaVA fine-tuning completed.")
 print(f"Checkpoints saved in: {OUTPUT_DIR}")
+
+
